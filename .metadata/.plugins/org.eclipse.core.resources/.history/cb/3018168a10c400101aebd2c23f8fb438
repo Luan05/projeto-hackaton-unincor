@@ -1,0 +1,5 @@
+package com.eventos.projeto.model.repository;
+
+public interface InscricaoRepository extends JpaRepository<Inscricao, Long> {
+    List<Inscricao> findByEventoId(Long eventoId);
+}

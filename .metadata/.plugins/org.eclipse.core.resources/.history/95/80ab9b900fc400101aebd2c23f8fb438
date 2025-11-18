@@ -1,0 +1,5 @@
+package com.eventos.projeto.model.repository;
+
+public class EventoRepository {
+
+}

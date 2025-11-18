@@ -1,0 +1,5 @@
+package com.eventos.projeto.model.domain;
+
+public class Inscricao {
+
+}

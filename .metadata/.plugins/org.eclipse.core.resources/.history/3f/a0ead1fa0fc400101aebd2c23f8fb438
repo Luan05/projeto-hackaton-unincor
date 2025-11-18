@@ -1,0 +1,6 @@
+package com.eventos.projeto.model.repository;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public class EventoRepository extends JpaRepository<Evento, Long> {
+
+}

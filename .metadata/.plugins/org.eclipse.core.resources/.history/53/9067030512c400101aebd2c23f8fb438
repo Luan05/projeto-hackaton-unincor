@@ -1,0 +1,20 @@
+@RestController
+@RequestMapping("/api/inscricoes")
+@RequiredArgsConstructor
+public class InscricaoController {
+
+    private final InscricaoRepository inscricaoRepo;
+    private final EventoRepository eventoRepo;
+
+    @PostMapping
+    public Inscricao criar(@RequestBody Inscricao inscricao) {
+        Evento evento = eventoRepo.findById(inscricao.getEvento().getId()).orElseThrow();
+        inscricao.setEvento(evento);
+        return inscricaoRepo.save(inscricao);
+    }
+
+    @GetMapping("/evento/{id}")
+    public List<Inscricao> listarPorEvento(@PathVariable Long id) {
+        return inscricaoRepo.findByEventoId(id);
+    }
+}

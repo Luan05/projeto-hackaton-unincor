@@ -1,0 +1,13 @@
+@Entity
+@Data
+public class Evento {
+    @Id @GeneratedValue
+    private Long id;
+
+    private String nome;
+    private LocalDate data;
+    private String descricao;
+
+    @OneToMany(mappedBy = "evento", cascade = CascadeType.ALL)
+    private List<Inscricao> inscricoes;
+}

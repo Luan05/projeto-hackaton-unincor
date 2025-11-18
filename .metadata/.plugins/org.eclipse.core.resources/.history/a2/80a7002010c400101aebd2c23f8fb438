@@ -1,0 +1,5 @@
+package com.eventos.projeto.model.repository;
+import com.eventos.projeto.model.domain.Evento;
+public class EventoRepository extends JpaRepository<Evento, Long> {
+
+}
